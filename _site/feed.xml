@@ -1,0 +1,226 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Chirpy</title>
+  <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
+  <updated>2022-11-26T22:51:55+08:00</updated>
+  <author>
+    <name>your_full_name</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
+  <rights> © 2022 your_full_name </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE</title>
+    <link href="http://localhost:4000/posts/MalwareTraffic-1/" rel="alternate" type="text/html" title="2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE" />
+    <published>2022-11-15T00:00:00+08:00</published>
+  
+    <updated>2022-11-15T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/MalwareTraffic-1/</id>
+    <content src="http://localhost:4000/posts/MalwareTraffic-1/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="CTF-TIME" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE
+
+SCENARIO
+
+Exercise Link
+
+Zip archive of the pcap: 2022-03-21-traffic-analysis-exercise.pcap.zip 4.9 MB (4,942,730 bytes)
+
+LAN segment data:
+
+
+  LAN segment range: 10.0.19.0/24 (10.0.19.0 through 10.0.19.255)
+  Domain: burnincandle.com
+  Domain controller: 10.0.19.9 - BURNINCANDLE-DC
+  LAN segment gateway: 10.0.19.1
+  LAN segment broadcast a...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>R2D2 Backdoor - Memory Forensics</title>
+    <link href="http://localhost:4000/posts/CyberConFinals/" rel="alternate" type="text/html" title="R2D2 Backdoor - Memory Forensics" />
+    <published>2022-11-15T00:00:00+08:00</published>
+  
+    <updated>2022-11-15T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/CyberConFinals/</id>
+    <content src="http://localhost:4000/posts/CyberConFinals/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="CTF-TIME" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Hey all and welcome once more to my blog. This past weekend i had the privilege to create a forensics challenge for the CyberCon Finals CTF which was held at USIU University. Top 4 Proffesional teams and 10 University teams battled out different challenges ranging from: Web, Forensics, Pwn, Reverse Engineering. Anyway, i didn’t have enough time to properly setup a challenge from scratch, so i r...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Enable Google Page Views</title>
+    <link href="http://localhost:4000/posts/enable-google-pv/" rel="alternate" type="text/html" title="Enable Google Page Views" />
+    <published>2021-01-04T07:32:00+08:00</published>
+  
+    <updated>2022-09-23T21:01:05+08:00</updated>
+  
+    <id>http://localhost:4000/posts/enable-google-pv/</id>
+    <content src="http://localhost:4000/posts/enable-google-pv/" />
+    <author>
+      <name>sille_bille</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+  The content of this post applies only to Universal Analytics property (UA), not Google Analytics 4 (GA 4). In addition, since UA is about to be deprecated on Jul 1, 2023, the Page Views feature of Chirpy will also be deprecated at that time.
+
+
+This post is to enable Page Views on the Chirpy theme based blog that you just built. This requires technical knowledge and it’s recommended to keep t...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Customize the Favicon</title>
+    <link href="http://localhost:4000/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
+    <published>2019-08-11T00:34:00+08:00</published>
+  
+    <updated>2022-03-17T02:05:45+08:00</updated>
+  
+    <id>http://localhost:4000/posts/customize-the-favicon/</id>
+    <content src="http://localhost:4000/posts/customize-the-favicon/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
+
+Generate the favicon
+
+Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Writing a New Post</title>
+    <link href="http://localhost:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
+    <published>2019-08-08T14:10:00+08:00</published>
+  
+    <updated>2022-11-18T22:18:04+08:00</updated>
+  
+    <id>http://localhost:4000/posts/write-a-new-post/</id>
+    <content src="http://localhost:4000/posts/write-a-new-post/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
+
+Naming and Path
+
+Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
