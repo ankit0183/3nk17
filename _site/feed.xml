@@ -2,18 +2,18 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>http://localhost:4000/</id>
-  <title>Chirpy</title>
+  <title>Ankit Kanojiya</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-26T22:51:55+08:00</updated>
+  <updated>2022-11-27T00:36:45+08:00</updated>
   <author>
-    <name>your_full_name</name>
+    <name>Ankit Kanojiya</name>
     <uri>http://localhost:4000/</uri>
   </author>
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
-  <rights> © 2022 your_full_name </rights>
+  <rights> © 2022 Ankit Kanojiya </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
@@ -29,7 +29,7 @@
     <id>http://localhost:4000/posts/MalwareTraffic-1/</id>
     <content src="http://localhost:4000/posts/MalwareTraffic-1/" />
     <author>
-      <name>your_full_name</name>
+      <name>Ankit Kanojiya</name>
     </author>
 
   
@@ -78,7 +78,7 @@ LAN segment data:
     <id>http://localhost:4000/posts/CyberConFinals/</id>
     <content src="http://localhost:4000/posts/CyberConFinals/" />
     <author>
-      <name>your_full_name</name>
+      <name>Ankit Kanojiya</name>
     </author>
 
   
@@ -107,7 +107,7 @@ LAN segment data:
     <link href="http://localhost:4000/posts/enable-google-pv/" rel="alternate" type="text/html" title="Enable Google Page Views" />
     <published>2021-01-04T07:32:00+08:00</published>
   
-    <updated>2022-09-23T21:01:05+08:00</updated>
+    <updated>2021-01-04T07:32:00+08:00</updated>
   
     <id>http://localhost:4000/posts/enable-google-pv/</id>
     <content src="http://localhost:4000/posts/enable-google-pv/" />
@@ -147,7 +147,7 @@ This post is to enable Page Views on the Chirpy theme based blog that you just b
     <link href="http://localhost:4000/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
     <published>2019-08-11T00:34:00+08:00</published>
   
-    <updated>2022-03-17T02:05:45+08:00</updated>
+    <updated>2019-08-11T00:34:00+08:00</updated>
   
     <id>http://localhost:4000/posts/customize-the-favicon/</id>
     <content src="http://localhost:4000/posts/customize-the-favicon/" />
@@ -187,7 +187,7 @@ Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and th
     <link href="http://localhost:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
     <published>2019-08-08T14:10:00+08:00</published>
   
-    <updated>2022-11-18T22:18:04+08:00</updated>
+    <updated>2019-08-08T14:10:00+08:00</updated>
   
     <id>http://localhost:4000/posts/write-a-new-post/</id>
     <content src="http://localhost:4000/posts/write-a-new-post/" />
