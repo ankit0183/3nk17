@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Ankit Kanojiya</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-27T03:16:59+08:00</updated>
+  <updated>2022-11-27T04:45:56+08:00</updated>
   <author>
     <name>Ankit Kanojiya</name>
     <uri>http://localhost:4000/</uri>
@@ -17,55 +17,6 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE</title>
-    <link href="http://localhost:4000/posts/MalwareTraffic-1/" rel="alternate" type="text/html" title="2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE" />
-    <published>2022-11-15T00:00:00+08:00</published>
-  
-    <updated>2022-11-15T00:00:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/MalwareTraffic-1/</id>
-    <content src="http://localhost:4000/posts/MalwareTraffic-1/" />
-    <author>
-      <name>Ankit Kanojiya</name>
-    </author>
-
-  
-    
-    <category term="CTF-TIME" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      2022-03-21 - TRAFFIC ANALYSIS EXERCISE - BURNINCANDLE
-
-SCENARIO
-
-Exercise Link
-
-Zip archive of the pcap: 2022-03-21-traffic-analysis-exercise.pcap.zip 4.9 MB (4,942,730 bytes)
-
-LAN segment data:
-
-
-  LAN segment range: 10.0.19.0/24 (10.0.19.0 through 10.0.19.255)
-  Domain: burnincandle.com
-  Domain controller: 10.0.19.9 - BURNINCANDLE-DC
-  LAN segment gateway: 10.0.19.1
-  LAN segment broadcast a...
-    </summary>
-  
-
-  </entry>
 
   
   <entry>
@@ -96,6 +47,78 @@ LAN segment data:
 
 
       Hey all and welcome once more to my blog. This past weekend i had the privilege to create a forensics challenge for the CyberCon Finals CTF which was held at USIU University. Top 4 Proffesional teams and 10 University teams battled out different challenges ranging from: Web, Forensics, Pwn, Reverse Engineering. Anyway, i didn’t have enough time to properly setup a challenge from scratch, so i r...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Delivery - Hack The Box</title>
+    <link href="http://localhost:4000/posts/htb-writeup-delivery/" rel="alternate" type="text/html" title="Delivery - Hack The Box" />
+    <published>2021-05-22T00:00:00+08:00</published>
+  
+    <updated>2021-05-22T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/htb-writeup-delivery/</id>
+    <content src="http://localhost:4000/posts/htb-writeup-delivery/" />
+    <author>
+      <name>Ankit Kanojiya</name>
+    </author>
+
+  
+    
+    <category term="hackthebox" />
+    
+    <category term="infosec" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Delivery is a quick and fun easy box where we have to create a MatterMost account and validate it by using automatic email accounts created by the OsTicket application. The admins on this platform have very poor security practices and put plaintext credentials in MatterMost. Once we get the initial shell with the creds from MatterMost we’ll poke around MySQL and get a root password bcrypt hash....
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Ready - Hack The Box</title>
+    <link href="http://localhost:4000/posts/htb-writeup-ready/" rel="alternate" type="text/html" title="Ready - Hack The Box" />
+    <published>2021-05-15T00:00:00+08:00</published>
+  
+    <updated>2021-05-15T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/htb-writeup-ready/</id>
+    <content src="http://localhost:4000/posts/htb-writeup-ready/" />
+    <author>
+      <name>Ankit Kanojiya</name>
+    </author>
+
+  
+    
+    <category term="hackthebox" />
+    
+    <category term="infosec" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Ready was a pretty straighforward box to get an initial shell on: We identify that’s it running a vulnerable instance of Gitlab and we use an exploit against version 11.4.7 to land a shell. Once inside, we quickly figure out we’re in a container and by looking at the docker compose file we can see the container is running in privileged mode. We then mount the host filesystem within the containe...
     </summary>
   
 
@@ -143,23 +166,23 @@ This post is to enable Page Views on the Chirpy theme based blog that you just b
 
   
   <entry>
-    <title>Customize the Favicon</title>
-    <link href="http://localhost:4000/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
-    <published>2019-08-11T00:34:00+08:00</published>
+    <title>Unbalanced - Hack The Box</title>
+    <link href="http://localhost:4000/posts/htb-writeup-unbalanced/" rel="alternate" type="text/html" title="Unbalanced - Hack The Box" />
+    <published>2020-12-05T00:00:00+08:00</published>
   
-    <updated>2019-08-11T00:34:00+08:00</updated>
+    <updated>2020-12-05T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/customize-the-favicon/</id>
-    <content src="http://localhost:4000/posts/customize-the-favicon/" />
+    <id>http://localhost:4000/posts/htb-writeup-unbalanced/</id>
+    <content src="http://localhost:4000/posts/htb-writeup-unbalanced/" />
     <author>
-      <name>cotes</name>
+      <name>Ankit Kanojiya</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="hackthebox" />
     
-    <category term="Tutorial" />
+    <category term="infosec" />
     
   
 
@@ -171,51 +194,7 @@ This post is to enable Page Views on the Chirpy theme based blog that you just b
 
 
 
-      The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
-
-Generate the favicon
-
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="http://localhost:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T14:10:00+08:00</published>
-  
-    <updated>2019-08-08T14:10:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/write-a-new-post/</id>
-    <content src="http://localhost:4000/posts/write-a-new-post/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
-
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to...
+      To solve Unbalanced, we’ll find configuration backups files in EncFS and after cracking the password and figuring out how EncFS works, we get the Squid proxy cache manager password that let us discover internal hosts. Proxying through Squid, we then land on a login page that uses Xpath to query an XML backend database. We perform Xpath injection to retrieve the password of each user, then port ...
     </summary>
   
 
