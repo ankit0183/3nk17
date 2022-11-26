@@ -10,9 +10,7 @@ categories:
 tags:
   - hackthebox
   - binary exploit  
-
-thumbnail: assets/images/htb-writeup-smasher/smasher.png
-
+image: /assets/images/htb-writeup-smasher/smasher.png
 ---
 
 ## Linux / 10.10.10.89
