@@ -18,7 +18,7 @@ tags:
 ---
 
 
-Flujab was without a doubt one of the toughest HTB box. It's got a ton of vhosts that force you to enumerate a lot of things and make sure you don't get distracted by the quantity of decoys and trolls left around. The key on this box is to stay 'in scope' as the box author hinted at before the box was released, so that means enumerating two specific domains without getting distracted by all the other stuff on the box.
+`Flujab` was without a doubt one of the toughest HTB box. It's got a ton of vhosts that force you to enumerate a lot of things and make sure you don't get distracted by the quantity of decoys and trolls left around. The key on this box is to stay 'in scope' as the box author hinted at before the box was released, so that means enumerating two specific domains without getting distracted by all the other stuff on the box.
 
 The hard part of the box is the SQL injection that forces you to exploit it manually or to write your own WAF evasion tamper scripts in SQLmap because the box author hardcoded some string substition in the code to defeat people blindly runnning sqlmap. This box is also rather unique because the output of the SQL queries is not seen on the web page where the query is sent but rather in an email received by SMTP, so we have to use a 2nd order SQL injection option in sqlmap or write custom code to handle this.
 

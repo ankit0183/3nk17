@@ -17,7 +17,7 @@ tags:
 ---
 
 
-Forwardslash starts off like most classic Hack The Box machines with some enumeration of vhosts, files and directories with gobuster then we use a Server-Side Request Forgery (SSRF) vulnerability to reach a protected dev directory only accessible from localhost. After finding credentials and getting a shell, we'll analyze and exploit a small backup program to read files as user pain and find more credentials. In the spirit of Team Unintended, instead of solving the crypto challenge to get root I used the sudo commands available to me to upload and mount my own Luks container and execute a SUID bash binary.
+`Forwardslash starts` off like most classic Hack The Box machines with some enumeration of vhosts, files and directories with gobuster then we use a Server-Side Request Forgery (SSRF) vulnerability to reach a protected dev directory only accessible from localhost. After finding credentials and getting a shell, we'll analyze and exploit a small backup program to read files as user pain and find more credentials. In the spirit of Team Unintended, instead of solving the crypto challenge to get root I used the sudo commands available to me to upload and mount my own Luks container and execute a SUID bash binary.
 
 ## Summary
 

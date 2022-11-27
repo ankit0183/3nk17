@@ -13,7 +13,7 @@ tags:
 ---
 
 
-Mango was a medium box with a NoSQSL injection in the login page that allows us to retrieve the username and password. The credentials we retrieve through the injection can be used to SSH to the box. For privilege escalation, the jjs tool has the SUID bit set so we can run scripts as root.
+  `Mango` was a `medium` box with a NoSQSL injection in the login page that allows us to retrieve the username and password. The credentials we retrieve through the injection can be used to SSH to the box. For privilege escalation, the jjs tool has the SUID bit set so we can run scripts as root.
 
 ## Summary
 

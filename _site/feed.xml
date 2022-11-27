@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Ankit Kanojiya</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-27T05:44:40+08:00</updated>
+  <updated>2022-11-27T14:48:12+08:00</updated>
   <author>
     <name>Ankit Kanojiya</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,51 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Squashead - Hack The Box</title>
+    <link href="http://localhost:4000/posts/htb-Squashed/" rel="alternate" type="text/html" title="Squashead - Hack The Box" />
+    <published>2022-11-25T00:00:00+08:00</published>
+  
+    <updated>2022-11-25T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/htb-Squashed/</id>
+    <content src="http://localhost:4000/posts/htb-Squashed/" />
+    <author>
+      <name>Ankit Kanojiya</name>
+    </author>
+
+  
+    
+    <category term="hackthebox" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
+misconfigurations in NFS shares through impersonating users. Additionally, the box incorporates the
+enumeration of an X11 display into the privilege escalation by having the attacker take a screenshot of the
+current Desktop.
+
+Enumaration
+
+Port Scan
+
+
+nmap -sC -sV 10.10.11.191
+Starting Nma...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -159,42 +204,6 @@
 
 
 This post is to enable Page Views on the Chirpy theme based blog that you just built. This requires technical knowledge and it’s recommended to keep t...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Unbalanced - Hack The Box</title>
-    <link href="http://localhost:4000/posts/htb-writeup-unbalanced/" rel="alternate" type="text/html" title="Unbalanced - Hack The Box" />
-    <published>2020-12-05T00:00:00+08:00</published>
-  
-    <updated>2020-12-05T00:00:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/htb-writeup-unbalanced/</id>
-    <content src="http://localhost:4000/posts/htb-writeup-unbalanced/" />
-    <author>
-      <name>Ankit Kanojiya</name>
-    </author>
-
-  
-    
-    <category term="hackthebox" />
-    
-    <category term="infosec" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      To solve Unbalanced, we’ll find configuration backups files in EncFS and after cracking the password and figuring out how EncFS works, we get the Squid proxy cache manager password that let us discover internal hosts. Proxying through Squid, we then land on a login page that uses Xpath to query an XML backend database. We perform Xpath injection to retrieve the password of each user, then port ...
     </summary>
   
 

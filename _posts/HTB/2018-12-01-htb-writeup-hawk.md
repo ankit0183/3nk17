@@ -19,7 +19,7 @@ This blog post is a quick writeup of Hawk from Hack the Box.
 
 ### Summary
 ------------------
-- The server is running an FTP server, a Drupal website and an H2 database (which is not accessible remotely)
+- The `server` is running an `FTP server`, a Drupal website and an H2 database (which is not accessible remotely)
 - There is an OpenSSL encrypted file on the publicly accessible FTP server
 - We can bruteforce the key using a bash script and the openssl command
 - The file contains the password for the Drupal admin account
@@ -27,7 +27,7 @@ This blog post is a quick writeup of Hawk from Hack the Box.
 - The shell gets us `www-data` and we can find the connection password in the Drupal configuration file
 - We can log in as user `daniel` with the password we found
 - The normal `/bin/bash` shell for user `daniel` has been replaced by `python`, which we can escape using `pty.spawn`
-- Looking at the running processes, we find that the H2 database is running as `root`
+- Looking at the running processes, we find that the `H2 database` is running as `root`
 - We can access the web interface by creating an SSH reverse tunnel back to our Kali machine
 - The `sa` username is using the default empty password but we can log in by changing the URL to anything other than the default string
 - Once logged in, we can execute commands as root using H2 SQL commands

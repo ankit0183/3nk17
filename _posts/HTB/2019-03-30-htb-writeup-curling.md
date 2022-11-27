@@ -18,7 +18,7 @@ tags:
 
 ## Quick summary
 
-- The username for the Joomla site is `Floris` as indicated on the main page in one of the post
+- The username for the `Joomla` site is `Floris` as indicated on the main page in one of the post
 - The password is a variant of a word on the main page: `Curling2018!`
 - On the Joomla admin page we can inject a meterpreter reverse shell in the `index.php` file of the template in-use
 - After getting a shell, we can download a password backup file, which is compressed several times, and contains the password for user `floris`
