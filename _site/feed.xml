@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Ankit Kanojiya</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-27T14:48:12+08:00</updated>
+  <updated>2023-02-10T04:47:15+08:00</updated>
   <author>
     <name>Ankit Kanojiya</name>
     <uri>http://localhost:4000/</uri>
@@ -12,8 +12,8 @@
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
-  <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
-  <rights> © 2022 Ankit Kanojiya </rights>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 Ankit Kanojiya </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
@@ -99,23 +99,21 @@ Starting Nma...
 
   
   <entry>
-    <title>Delivery - Hack The Box</title>
-    <link href="http://localhost:4000/posts/htb-writeup-delivery/" rel="alternate" type="text/html" title="Delivery - Hack The Box" />
-    <published>2021-05-22T00:00:00+08:00</published>
+    <title>Hack The Box - Scanned</title>
+    <link href="http://localhost:4000/posts/scanned/" rel="alternate" type="text/html" title="Hack The Box - Scanned" />
+    <published>2022-09-10T00:00:00+08:00</published>
   
-    <updated>2021-05-22T00:00:00+08:00</updated>
+    <updated>2022-09-10T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/htb-writeup-delivery/</id>
-    <content src="http://localhost:4000/posts/htb-writeup-delivery/" />
+    <id>http://localhost:4000/posts/scanned/</id>
+    <content src="http://localhost:4000/posts/scanned/" />
     <author>
       <name>Ankit Kanojiya</name>
     </author>
 
   
     
-    <category term="hackthebox" />
-    
-    <category term="infosec" />
+    <category term="HackTheBox" />
     
   
 
@@ -127,7 +125,11 @@ Starting Nma...
 
 
 
-      Delivery is a quick and fun easy box where we have to create a MatterMost account and validate it by using automatic email accounts created by the OsTicket application. The admins on this platform have very poor security practices and put plaintext credentials in MatterMost. Once we get the initial shell with the creds from MatterMost we’ll poke around MySQL and get a root password bcrypt hash....
+      Scanned is an insane rated machine on HackTheBox created by clubby789. For the user part we will escape a chroot jail to read the database file of a web server giving us ssh access because of reused credentials. To obtain root we will again fiddle with the chroot jail binary to call a suid binary using a backdored library and thus getting code execution as the root user.
+
+User
+
+As usual we star...
     </summary>
   
 
@@ -135,23 +137,21 @@ Starting Nma...
 
   
   <entry>
-    <title>Ready - Hack The Box</title>
-    <link href="http://localhost:4000/posts/htb-writeup-ready/" rel="alternate" type="text/html" title="Ready - Hack The Box" />
-    <published>2021-05-15T00:00:00+08:00</published>
+    <title>Hack The Box - Paper</title>
+    <link href="http://localhost:4000/posts/paper/" rel="alternate" type="text/html" title="Hack The Box - Paper" />
+    <published>2022-06-18T00:00:00+08:00</published>
   
-    <updated>2021-05-15T00:00:00+08:00</updated>
+    <updated>2022-06-18T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/htb-writeup-ready/</id>
-    <content src="http://localhost:4000/posts/htb-writeup-ready/" />
+    <id>http://localhost:4000/posts/paper/</id>
+    <content src="http://localhost:4000/posts/paper/" />
     <author>
       <name>Ankit Kanojiya</name>
     </author>
 
   
     
-    <category term="hackthebox" />
-    
-    <category term="infosec" />
+    <category term="HackTheBox" />
     
   
 
@@ -163,7 +163,8 @@ Starting Nma...
 
 
 
-      Ready was a pretty straighforward box to get an initial shell on: We identify that’s it running a vulnerable instance of Gitlab and we use an exploit against version 11.4.7 to land a shell. Once inside, we quickly figure out we’re in a container and by looking at the docker compose file we can see the container is running in privileged mode. We then mount the host filesystem within the containe...
+      User
+Paper is an easy rated machine on HackTheBox created by secnigma. For the user part we will abuse an information leak through a CVE in wordpress to register an account in a rocket chat installation. In rocket chat a bot is vulnerable to LFI which gets us a password that is reused for the user dwight. In the root stage we will go over the unintended method of using pkexec and the intended o...
     </summary>
   
 
@@ -171,23 +172,21 @@ Starting Nma...
 
   
   <entry>
-    <title>Enable Google Page Views</title>
-    <link href="http://localhost:4000/posts/enable-google-pv/" rel="alternate" type="text/html" title="Enable Google Page Views" />
-    <published>2021-01-04T07:32:00+08:00</published>
+    <title>Hack The Box - Meta</title>
+    <link href="http://localhost:4000/posts/meta/" rel="alternate" type="text/html" title="Hack The Box - Meta" />
+    <published>2022-06-11T00:00:00+08:00</published>
   
-    <updated>2021-01-04T07:32:00+08:00</updated>
+    <updated>2022-06-11T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/enable-google-pv/</id>
-    <content src="http://localhost:4000/posts/enable-google-pv/" />
+    <id>http://localhost:4000/posts/meta/</id>
+    <content src="http://localhost:4000/posts/meta/" />
     <author>
-      <name>sille_bille</name>
+      <name>Ankit Kanojiya</name>
     </author>
 
   
     
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
+    <category term="HackTheBox" />
     
   
 
@@ -199,11 +198,10 @@ Starting Nma...
 
 
 
-      
-  The content of this post applies only to Universal Analytics property (UA), not Google Analytics 4 (GA 4). In addition, since UA is about to be deprecated on Jul 1, 2023, the Page Views feature of Chirpy will also be deprecated at that time.
+      Meta is a medium rated machine on HackTheBox created by Nauten. For the user part we will abuse a CVE in exiftool to obtain a reverse shell on the machine. This will be followed up by another CVE inside ImageMagick which will give us a shell as another user. To escalate to root we will modify a config file for neofetch which we are able to run using sudo.
 
-
-This post is to enable Page Views on the Chirpy theme based blog that you just built. This requires technical knowledge and it’s recommended to keep t...
+User
+As usual we start our enumeration...
     </summary>
   
 
