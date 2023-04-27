@@ -1214,14 +1214,14 @@
 </pre></td><td class="rouge-code"><pre><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">nmap</span> <span class="o">-</span><span class="nx">n</span> <span class="o">-</span><span class="nx">p</span><span class="o">-</span> <span class="o">-</span><span class="nx">T4</span> <span class="mf">10.129</span><span class="p">.</span><span class="mf">158.20</span>
 <span class="nx">Starting</span> <span class="nx">Nmap</span> <span class="mf">7.92</span> <span class="p">(</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//nmap.org ) at 2022-02-05 20:52 CET</span>
 <span class="nx">Nmap</span> <span class="nx">scan</span> <span class="nx">report</span> <span class="k">for</span> <span class="mf">10.129</span><span class="p">.</span><span class="mf">158.20</span>
-<span class="nx">Host</span> <span class="nx">is</span> <span class="nx">up</span> <span class="p">(</span><span class="mf">0.028</span><span class="nx">s</span> <span class="nx">latency</span><span class="p">).</span>
-<span class="nx">Not</span> <span class="nx">shown</span><span class="p">:</span> <span class="mi">65528</span> <span class="nx">closed</span> <span class="nx">tcp</span> <span class="nx">ports</span> <span class="p">(</span><span class="nx">reset</span><span class="p">)</span>
+<span class="nx">Host</span> <span class="nx">is</span> <span class="nf">up </span><span class="p">(</span><span class="mf">0.028</span><span class="nx">s</span> <span class="nx">latency</span><span class="p">).</span>
+<span class="nx">Not</span> <span class="nx">shown</span><span class="p">:</span> <span class="mi">65528</span> <span class="nx">closed</span> <span class="nx">tcp</span> <span class="nf">ports </span><span class="p">(</span><span class="nx">reset</span><span class="p">)</span>
 <span class="nx">PORT</span>      <span class="nx">STATE</span>    <span class="nx">SERVICE</span>
 <span class="mi">22</span><span class="o">/</span><span class="nx">tcp</span>    <span class="nx">open</span>     <span class="nx">ssh</span>
 <span class="mi">80</span><span class="o">/</span><span class="nx">tcp</span>    <span class="nx">open</span>     <span class="nx">http</span>
 <span class="mi">443</span><span class="o">/</span><span class="nx">tcp</span>   <span class="nx">open</span>     <span class="nx">https</span>
 
-<span class="nx">Nmap</span> <span class="nx">done</span><span class="p">:</span> <span class="mi">1</span> <span class="nx">IP</span> <span class="nx">address</span> <span class="p">(</span><span class="mi">1</span> <span class="nx">host</span> <span class="nx">up</span><span class="p">)</span> <span class="nx">scanned</span> <span class="k">in</span> <span class="mf">1130.89</span> <span class="nx">seconds</span>
+<span class="nx">Nmap</span> <span class="nx">done</span><span class="p">:</span> <span class="mi">1</span> <span class="nx">IP</span> <span class="nf">address </span><span class="p">(</span><span class="mi">1</span> <span class="nx">host</span> <span class="nx">up</span><span class="p">)</span> <span class="nx">scanned</span> <span class="k">in</span> <span class="mf">1130.89</span> <span class="nx">seconds</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><code class="language-plaintext highlighter-rouge">Script and Version</code></p>
@@ -1262,7 +1262,7 @@
 </pre></td><td class="rouge-code"><pre><span class="nx">$</span> <span class="nx">sudo</span> <span class="nx">nmap</span> <span class="o">-</span><span class="nx">n</span> <span class="o">-</span><span class="nx">sC</span> <span class="o">-</span><span class="nx">sV</span> <span class="o">-</span><span class="nx">p22</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">443</span> <span class="mf">10.129</span><span class="p">.</span><span class="mf">158.20</span>
 <span class="nx">Starting</span> <span class="nx">Nmap</span> <span class="mf">7.92</span> <span class="p">(</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//nmap.org ) at 2022-02-05 21:14 CET</span>
 <span class="nx">Nmap</span> <span class="nx">scan</span> <span class="nx">report</span> <span class="k">for</span> <span class="mf">10.129</span><span class="p">.</span><span class="mf">158.20</span>
-<span class="nx">Host</span> <span class="nx">is</span> <span class="nx">up</span> <span class="p">(</span><span class="mf">0.033</span><span class="nx">s</span> <span class="nx">latency</span><span class="p">).</span>
+<span class="nx">Host</span> <span class="nx">is</span> <span class="nf">up </span><span class="p">(</span><span class="mf">0.033</span><span class="nx">s</span> <span class="nx">latency</span><span class="p">).</span>
 
 <span class="nx">PORT</span>    <span class="nx">STATE</span> <span class="nx">SERVICE</span>  <span class="nx">VERSION</span>
 <span class="mi">22</span><span class="o">/</span><span class="nx">tcp</span>  <span class="nx">open</span>  <span class="nx">ssh</span>      <span class="nx">OpenSSH</span> <span class="mf">8.0</span> <span class="p">(</span><span class="nx">protocol</span> <span class="mf">2.0</span><span class="p">)</span>
@@ -1290,7 +1290,7 @@
 <span class="o">|</span><span class="nx">_</span>  <span class="nx">http</span><span class="o">/</span><span class="mf">1.1</span>
 
 <span class="nx">Service</span> <span class="nx">detection</span> <span class="nx">performed</span><span class="p">.</span> <span class="nx">Please</span> <span class="nx">report</span> <span class="nx">any</span> <span class="nx">incorrect</span> <span class="nx">results</span> <span class="nx">at</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//nmap.org/submit/ .</span>
-<span class="nx">Nmap</span> <span class="nx">done</span><span class="p">:</span> <span class="mi">1</span> <span class="nx">IP</span> <span class="nx">address</span> <span class="p">(</span><span class="mi">1</span> <span class="nx">host</span> <span class="nx">up</span><span class="p">)</span> <span class="nx">scanned</span> <span class="k">in</span> <span class="mf">20.95</span> <span class="nx">seconds</span>
+<span class="nx">Nmap</span> <span class="nx">done</span><span class="p">:</span> <span class="mi">1</span> <span class="nx">IP</span> <span class="nf">address </span><span class="p">(</span><span class="mi">1</span> <span class="nx">host</span> <span class="nx">up</span><span class="p">)</span> <span class="nx">scanned</span> <span class="k">in</span> <span class="mf">20.95</span> <span class="nx">seconds</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <h2 id="wordpress-draft"><span class="mr-2">Wordpress draft</span><a href="#wordpress-draft" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -1358,34 +1358,34 @@
 
 <span class="p">...[</span><span class="nx">snip</span><span class="p">]...</span>
 
-<span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nx">WordPress</span> <span class="nx">version</span> <span class="mf">5.2</span><span class="p">.</span><span class="mi">3</span> <span class="nx">identified</span> <span class="p">(</span><span class="nx">Insecure</span><span class="p">,</span> <span class="nx">released</span> <span class="nx">on</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">05</span><span class="p">).</span>
- <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Rss</span> <span class="nx">Generator</span> <span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
+<span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nx">WordPress</span> <span class="nx">version</span> <span class="mf">5.2</span><span class="p">.</span><span class="mi">3</span> <span class="nf">identified </span><span class="p">(</span><span class="nx">Insecure</span><span class="p">,</span> <span class="nx">released</span> <span class="nx">on</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">05</span><span class="p">).</span>
+ <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Rss</span> <span class="nc">Generator </span><span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
  <span class="o">|</span>  <span class="o">-</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//office.paper/index.php/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;</span>
  <span class="o">|</span>  <span class="o">-</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//office.paper/index.php/comments/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.3&lt;/generator&gt;</span>
 
 <span class="p">...[</span><span class="nx">snip</span><span class="p">]...</span>
 
-<span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="nx">User</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="nx">Identified</span><span class="p">:</span>
+<span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="nc">User</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="nx">Identified</span><span class="p">:</span>
 
 <span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nx">prisonmike</span>
- <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Author</span> <span class="nx">Posts</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nx">Pattern</span> <span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Author</span> <span class="nx">Posts</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nc">Pattern </span><span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
  <span class="o">|</span> <span class="nx">Confirmed</span> <span class="nx">By</span><span class="p">:</span>
- <span class="o">|</span>  <span class="nx">Rss</span> <span class="nx">Generator</span> <span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
- <span class="o">|</span>  <span class="nx">Wp</span> <span class="nx">Json</span> <span class="nx">Api</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Rss</span> <span class="nc">Generator </span><span class="p">(</span><span class="nx">Passive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Wp</span> <span class="nx">Json</span> <span class="nc">Api </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
  <span class="o">|</span>   <span class="o">-</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//office.paper/index.php/wp-json/wp/v2/users/?per_page=100&amp;page=1</span>
- <span class="o">|</span>  <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nx">Pattern</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
- <span class="o">|</span>  <span class="nx">Login</span> <span class="nb">Error</span> <span class="nx">Messages</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nc">Pattern </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Login</span> <span class="nb">Error</span> <span class="nc">Messages </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
 
 <span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nx">nick</span>
- <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Wp</span> <span class="nx">Json</span> <span class="nx">Api</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Wp</span> <span class="nx">Json</span> <span class="nc">Api </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
  <span class="o">|</span>  <span class="o">-</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//office.paper/index.php/wp-json/wp/v2/users/?per_page=100&amp;page=1</span>
  <span class="o">|</span> <span class="nx">Confirmed</span> <span class="nx">By</span><span class="p">:</span>
- <span class="o">|</span>  <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nx">Pattern</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
- <span class="o">|</span>  <span class="nx">Login</span> <span class="nb">Error</span> <span class="nx">Messages</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nc">Pattern </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span>  <span class="nx">Login</span> <span class="nb">Error</span> <span class="nc">Messages </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
 
 <span class="p">[</span><span class="o">+</span><span class="p">]</span> <span class="nx">creedthoughts</span>
- <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nx">Pattern</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
- <span class="o">|</span> <span class="nx">Confirmed</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Login</span> <span class="nb">Error</span> <span class="nx">Messages</span> <span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span> <span class="nx">Found</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Author</span> <span class="nx">Id</span> <span class="nx">Brute</span> <span class="nx">Forcing</span> <span class="o">-</span> <span class="nx">Author</span> <span class="nc">Pattern </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
+ <span class="o">|</span> <span class="nx">Confirmed</span> <span class="nx">By</span><span class="p">:</span> <span class="nx">Login</span> <span class="nb">Error</span> <span class="nc">Messages </span><span class="p">(</span><span class="nx">Aggressive</span> <span class="nx">Detection</span><span class="p">)</span>
 
 <span class="p">[</span><span class="o">!</span><span class="p">]</span> <span class="nx">No</span> <span class="nx">WPScan</span> <span class="nx">API</span> <span class="nx">Token</span> <span class="nx">given</span><span class="p">,</span> <span class="k">as</span> <span class="nx">a</span> <span class="nx">result</span> <span class="nx">vulnerability</span> <span class="nx">data</span> <span class="nx">has</span> <span class="nx">not</span> <span class="nx">been</span> <span class="nx">output</span><span class="p">.</span>
 <span class="p">[</span><span class="o">!</span><span class="p">]</span> <span class="nx">You</span> <span class="nx">can</span> <span class="kd">get</span> <span class="nx">a</span> <span class="nx">free</span> <span class="nx">API</span> <span class="nx">token</span> <span class="kd">with</span> <span class="mi">25</span> <span class="nx">daily</span> <span class="nx">requests</span> <span class="nx">by</span> <span class="nx">registering</span> <span class="nx">at</span> <span class="nx">https</span><span class="p">:</span><span class="c1">//wpscan.com/register</span>
@@ -1881,6 +1881,493 @@ PwnKit-Exploit.tar.gz                                                           
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1939,62 +2426,15 @@ PwnKit-Exploit.tar.gz                                                           
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2023,194 +2463,9 @@ PwnKit-Exploit.tar.gz                                                           
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2235,34 +2490,34 @@ PwnKit-Exploit.tar.gz                                                           
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>
@@ -2359,6 +2614,136 @@ PwnKit-Exploit.tar.gz                                                           
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
   
 
@@ -2382,16 +2767,6 @@ PwnKit-Exploit.tar.gz                                                           
 <!-- Fill with the other newlest posts  -->
 
 
-
-  
-    
-    
-      
-      
-        
-        
-        
-          
 
 
 
@@ -2477,7 +2852,7 @@ PwnKit-Exploit.tar.gz                                                           
       
       
       <div class="card">
-        <a href="/posts/htb-Squashed/">
+        <a href="/posts/HackTheBox-Walkthrough-Investigation/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2489,13 +2864,13 @@ PwnKit-Exploit.tar.gz                                                           
 
 
 <em class="small"
-    data-ts="1669305600"
+    data-ts="1682092800"
     data-df="ll"
     >
-  Nov 25, 2022
+  Apr 22, 2023
 </em>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Squashead - Hack The Box</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hack The Box - Investigation</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2504,8 +2879,11 @@ PwnKit-Exploit.tar.gz                                                           
 
 
 
-                Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
-misconfigurations in NFS shares through impersonating users. Additionally, the box incorp...
+                In this machine, I had to exploit a known vulnerability in exiftool, find a password in some logs, and finally reverse a program to find how to exploit it.
+
+
+  Room: Investigation
+  Difficulty: Med...
               </p>
             </div>
           </div>
@@ -2613,6 +2991,493 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2671,62 +3536,15 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2755,194 +3573,9 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2967,34 +3600,34 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>

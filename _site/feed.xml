@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Ankit Kanojiya</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2023-02-10T04:47:15+08:00</updated>
+  <updated>2023-04-27T18:32:07+08:00</updated>
   <author>
     <name>Ankit Kanojiya</name>
     <uri>http://localhost:4000/</uri>
@@ -20,93 +20,14 @@
 
   
   <entry>
-    <title>Squashead - Hack The Box</title>
-    <link href="http://localhost:4000/posts/htb-Squashed/" rel="alternate" type="text/html" title="Squashead - Hack The Box" />
-    <published>2022-11-25T00:00:00+08:00</published>
+    <title>Hack The Box - Investigation</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Walkthrough-Investigation/" rel="alternate" type="text/html" title="Hack The Box - Investigation" />
+    <published>2023-04-22T00:00:00+08:00</published>
   
-    <updated>2022-11-25T00:00:00+08:00</updated>
+    <updated>2023-04-22T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/htb-Squashed/</id>
-    <content src="http://localhost:4000/posts/htb-Squashed/" />
-    <author>
-      <name>Ankit Kanojiya</name>
-    </author>
-
-  
-    
-    <category term="hackthebox" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
-misconfigurations in NFS shares through impersonating users. Additionally, the box incorporates the
-enumeration of an X11 display into the privilege escalation by having the attacker take a screenshot of the
-current Desktop.
-
-Enumaration
-
-Port Scan
-
-
-nmap -sC -sV 10.10.11.191
-Starting Nma...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>R2D2 Backdoor - Memory Forensics</title>
-    <link href="http://localhost:4000/posts/CyberConFinals/" rel="alternate" type="text/html" title="R2D2 Backdoor - Memory Forensics" />
-    <published>2022-11-15T00:00:00+08:00</published>
-  
-    <updated>2022-11-15T00:00:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/CyberConFinals/</id>
-    <content src="http://localhost:4000/posts/CyberConFinals/" />
-    <author>
-      <name>Ankit Kanojiya</name>
-    </author>
-
-  
-    
-    <category term="CTF-TIME" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Hey all and welcome once more to my blog. This past weekend i had the privilege to create a forensics challenge for the CyberCon Finals CTF which was held at USIU University. Top 4 Proffesional teams and 10 University teams battled out different challenges ranging from: Web, Forensics, Pwn, Reverse Engineering. Anyway, i didn’t have enough time to properly setup a challenge from scratch, so i r...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Hack The Box - Scanned</title>
-    <link href="http://localhost:4000/posts/scanned/" rel="alternate" type="text/html" title="Hack The Box - Scanned" />
-    <published>2022-09-10T00:00:00+08:00</published>
-  
-    <updated>2022-09-10T00:00:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/scanned/</id>
-    <content src="http://localhost:4000/posts/scanned/" />
+    <id>http://localhost:4000/posts/HackTheBox-Walkthrough-Investigation/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Walkthrough-Investigation/" />
     <author>
       <name>Ankit Kanojiya</name>
     </author>
@@ -125,11 +46,21 @@ Starting Nma...
 
 
 
-      Scanned is an insane rated machine on HackTheBox created by clubby789. For the user part we will escape a chroot jail to read the database file of a web server giving us ssh access because of reused credentials. To obtain root we will again fiddle with the chroot jail binary to call a suid binary using a backdored library and thus getting code execution as the root user.
+      In this machine, I had to exploit a known vulnerability in exiftool, find a password in some logs, and finally reverse a program to find how to exploit it.
 
-User
 
-As usual we star...
+  Room: Investigation
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machines/Investigation
+  Author: Derezzed
+
+
+Enumeration
+
+I began the box by running Rustscan to look for open ports.
+
+$ rustscan -a target -- -A | tee rust.txt
+.-...
     </summary>
   
 
@@ -137,21 +68,19 @@ As usual we star...
 
   
   <entry>
-    <title>Hack The Box - Paper</title>
-    <link href="http://localhost:4000/posts/paper/" rel="alternate" type="text/html" title="Hack The Box - Paper" />
-    <published>2022-06-18T00:00:00+08:00</published>
+    <title>Hack The Box - Encoding</title>
+    <link href="http://localhost:4000/2023/04/HTB/Encoding" rel="alternate" type="text/html" title="Hack The Box - Encoding" />
+    <published>2023-04-15T00:00:00+08:00</published>
   
-    <updated>2022-06-18T00:00:00+08:00</updated>
+    <updated>2023-04-15T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/paper/</id>
-    <content src="http://localhost:4000/posts/paper/" />
+    <id>http://localhost:4000/2023/04/HTB/Encoding</id>
+    <content src="http://localhost:4000/2023/04/HTB/Encoding" />
     <author>
       <name>Ankit Kanojiya</name>
     </author>
 
   
-    
-    <category term="HackTheBox" />
     
   
 
@@ -163,8 +92,21 @@ As usual we star...
 
 
 
-      User
-Paper is an easy rated machine on HackTheBox created by secnigma. For the user part we will abuse an information leak through a CVE in wordpress to register an account in a rocket chat installation. In rocket chat a bot is vulnerable to LFI which gets us a password that is reused for the user dwight. In the root stage we will go over the unintended method of using pkexec and the intended o...
+      This was a really fun box. I had to exploit two LFI vulnerabilities and PHP filters to get a foothold. Then exploit git configuration and systemd to escalate my privileges.
+
+
+  Room: Encoding
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machines/Encoding
+  Author: kavigihan
+
+
+Enumeration
+
+I started by scanning for open ports.
+
+$ rustscan -a target -- -A | tee rust.txt
+.----. .-. .-. ....
     </summary>
   
 
@@ -172,21 +114,19 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
   
   <entry>
-    <title>Hack The Box - Meta</title>
-    <link href="http://localhost:4000/posts/meta/" rel="alternate" type="text/html" title="Hack The Box - Meta" />
-    <published>2022-06-11T00:00:00+08:00</published>
+    <title>Hack The Box - BroScience</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Walkthrough-BroScience/" rel="alternate" type="text/html" title="Hack The Box - BroScience" />
+    <published>2023-04-08T00:00:00+08:00</published>
   
-    <updated>2022-06-11T00:00:00+08:00</updated>
+    <updated>2023-04-08T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/meta/</id>
-    <content src="http://localhost:4000/posts/meta/" />
+    <id>http://localhost:4000/posts/HackTheBox-Walkthrough-BroScience/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Walkthrough-BroScience/" />
     <author>
       <name>Ankit Kanojiya</name>
     </author>
 
   
-    
-    <category term="HackTheBox" />
     
   
 
@@ -198,10 +138,111 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 
-      Meta is a medium rated machine on HackTheBox created by Nauten. For the user part we will abuse a CVE in exiftool to obtain a reverse shell on the machine. This will be followed up by another CVE inside ImageMagick which will give us a shell as another user. To escalate to root we will modify a config file for neofetch which we are able to run using sudo.
+      In this box, I had to exploit an LFI, a vulnerable token generation, and a serialization vulnerability to get to a shell. Then I had to crack a hashed password, and finally, get code execution in a script running as root.
 
-User
-As usual we start our enumeration...
+
+  Room: BroScience
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machines/BroScience
+  Author: bmdyy
+
+
+Enumeration
+
+I began the box by scanning for open ports.
+
+$ r...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Hack The Box - Mentor</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Walkthrough-Mentor/" rel="alternate" type="text/html" title="Hack The Box - Mentor" />
+    <published>2023-03-11T00:00:00+08:00</published>
+  
+    <updated>2023-03-11T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/HackTheBox-Walkthrough-Mentor/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Walkthrough-Mentor/" />
+    <author>
+      <name>Ankit Kanojiya</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      This machine took me a long time to own because I failed at basic enumeration. Most of the work to do this box was in finding the passwords laying around.
+
+
+  Room: Mentor
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machines/Mentor
+  Author: kavigihan
+
+
+Enumeration
+
+I began by launching Rustscan to find open ports.
+
+$ rustscan -a target -- -A | tee rust.txt
+.----. .-. .-. .----..---....
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Hack The Box Walkthrough - Awkward</title>
+    <link href="http://localhost:4000/posts/HackTheBox-Walkthrough-Awkward/" rel="alternate" type="text/html" title="Hack The Box Walkthrough - Awkward" />
+    <published>2023-02-25T00:00:00+08:00</published>
+  
+    <updated>2023-02-25T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/HackTheBox-Walkthrough-Awkward/</id>
+    <content src="http://localhost:4000/posts/HackTheBox-Walkthrough-Awkward/" />
+    <author>
+      <name>Ankit Kanojiya</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      This was a difficult box for me. I had to exploit a web application to get Remote Code Execution, find the user’s password in an notes file, then exploit the same application a second time to get root.
+
+
+  Room: Awkward
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machines/Awkward
+  Author: coopertim13
+
+
+Enumeration
+
+I started by enumerating open ports with rustscan.
+
+$ rustscan -a ta...
     </summary>
   
 

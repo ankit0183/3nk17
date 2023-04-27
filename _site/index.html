@@ -46,6 +46,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Ankit Kanojiya" />
 <meta property="og:type" content="website" />
+<link rel="next" href="http://localhost:4000/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Ankit Kanojiya" />
 <meta name="twitter:site" content="@AnkitKanojiya69" />
@@ -330,7 +331,7 @@
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/htb-Squashed/">Squashead - Hack The Box</a>
+      <a href="/posts/HackTheBox-Walkthrough-Investigation/">Hack The Box - Investigation</a>
     </h1>
 
     <div class="post-content">
@@ -341,12 +342,15 @@
 
 
 
-        Squashed is an Easy Difficulty Linux machine that features a combination of both identifying and leveraging
-misconfigurations in NFS shares through impersonating users. Additionally, the box incorp...
+        In this machine, I had to exploit a known vulnerability in exiftool, find a password in some logs, and finally reverse a program to find how to exploit it.
+
+
+  Room: Investigation
+  Difficulty: Med...
       </p>
       <div class="post-img-cnt img-responsive" style="text-align: center" >
-        <a href="/posts/htb-Squashed/">
-          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/img/htb/squashed/info.png"  width="500" align="center" />
+        <a href="/posts/HackTheBox-Walkthrough-Investigation/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Investigation/Investigation.png"  width="500" align="center" />
         </a>
 
         
@@ -370,144 +374,10 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
 
 <em class=""
-    data-ts="1669305600"
+    data-ts="1682092800"
     data-df="ll"
     >
-  Nov 25, 2022
-</em>
-
-
-        <!-- categories -->
-        
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            hackthebox
-          </span>
-        
-
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/CyberConFinals/">R2D2 Backdoor - Memory Forensics</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Hey all and welcome once more to my blog. This past weekend i had the privilege to create a forensics challenge for the CyberCon Finals CTF which was held at USIU University. Top 4 Proffesional tea...
-      </p>
-      <div class="post-img-cnt img-responsive" style="text-align: center" >
-        <a href="/posts/CyberConFinals/">
-          <img style="margin-top:10px; margin-bottom:10px;" src="../../assets/img/Posts/cyberconfinals.png"  width="500" align="center" />
-        </a>
-
-        
-        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
-      
-      </div>
-    </div>
-
-    <div class="post-meta text-muted d-flex">
-      <div class="mr-auto">
-
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1668441600"
-    data-df="ll"
-    >
-  Nov 15, 2022
-</em>
-
-
-        <!-- categories -->
-        
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            CTF-TIME
-          </span>
-        
-
-      </div>
-
-      
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-
-
-  <div class="post-preview">
-    <h1>
-      <a href="/posts/scanned/">Hack The Box - Scanned</a>
-    </h1>
-
-    <div class="post-content">
-      <p>
-        
-
-
-
-
-
-        Scanned is an insane rated machine on HackTheBox created by clubby789. For the user part we will escape a chroot jail to read the database file of a web server giving us ssh access because of reuse...
-      </p>
-      <div class="post-img-cnt img-responsive" style="text-align: center" >
-        <a href="/posts/scanned/">
-          <img style="margin-top:10px; margin-bottom:10px;" src="/img/scanned/000_info_card.png"  width="500" align="center" />
-        </a>
-
-        
-        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
-      
-      </div>
-    </div>
-
-    <div class="post-meta text-muted d-flex">
-      <div class="mr-auto">
-
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class=""
-    data-ts="1662739200"
-    data-df="ll"
-    >
-  Sep 10, 2022
+  Apr 22, 2023
 </em>
 
 
@@ -532,7 +402,7 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/paper/">Hack The Box - Paper</a>
+      <a href="/2023/04/HTB/Encoding">Hack The Box - Encoding</a>
     </h1>
 
     <div class="post-content">
@@ -543,12 +413,15 @@ misconfigurations in NFS shares through impersonating users. Additionally, the b
 
 
 
-        User
-Paper is an easy rated machine on HackTheBox created by secnigma. For the user part we will abuse an information leak through a CVE in wordpress to register an account in a rocket chat install...
+        This was a really fun box. I had to exploit two LFI vulnerabilities and PHP filters to get a foothold. Then exploit git configuration and systemd to escalate my privileges.
+
+
+  Room: Encoding
+  Dif...
       </p>
       <div class="post-img-cnt img-responsive" style="text-align: center" >
-        <a href="/posts/paper/">
-          <img style="margin-top:10px; margin-bottom:10px;" src="/img/paper/000_info_card.png"  width="500" align="center" />
+        <a href="/2023/04/HTB/Encoding">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Encoding/Encoding.png"  width="500" align="center" />
         </a>
 
         
@@ -572,20 +445,14 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 <em class=""
-    data-ts="1655481600"
+    data-ts="1681488000"
     data-df="ll"
     >
-  Jun 18, 2022
+  Apr 15, 2023
 </em>
 
 
         <!-- categories -->
-        
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            HackTheBox
-          </span>
         
 
       </div>
@@ -600,7 +467,7 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
   <div class="post-preview">
     <h1>
-      <a href="/posts/meta/">Hack The Box - Meta</a>
+      <a href="/posts/HackTheBox-Walkthrough-BroScience/">Hack The Box - BroScience</a>
     </h1>
 
     <div class="post-content">
@@ -611,11 +478,11 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 
-        Meta is a medium rated machine on HackTheBox created by Nauten. For the user part we will abuse a CVE in exiftool to obtain a reverse shell on the machine. This will be followed up by another CVE i...
+        In this box, I had to exploit an LFI, a vulnerable token generation, and a serialization vulnerability to get to a shell. Then I had to crack a hashed password, and finally, get code execution in a...
       </p>
       <div class="post-img-cnt img-responsive" style="text-align: center" >
-        <a href="/posts/meta/">
-          <img style="margin-top:10px; margin-bottom:10px;" src="/img/meta/000_info_card.png"  width="500" align="center" />
+        <a href="/posts/HackTheBox-Walkthrough-BroScience/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/BroScience/Bro.png"  width="500" align="center" />
         </a>
 
         
@@ -639,20 +506,456 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
 
 <em class=""
-    data-ts="1654876800"
+    data-ts="1680883200"
     data-df="ll"
     >
-  Jun 11, 2022
+  Apr  8, 2023
 </em>
 
 
         <!-- categories -->
         
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          
-            HackTheBox
-          </span>
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Mentor/">Hack The Box - Mentor</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        This machine took me a long time to own because I failed at basic enumeration. Most of the work to do this box was in finding the passwords laying around.
+
+
+  Room: Mentor
+  Difficulty: Medium
+  UR...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Mentor/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Mentor/Mentor.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1678464000"
+    data-df="ll"
+    >
+  Mar 11, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Awkward/">Hack The Box Walkthrough - Awkward</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        This was a difficult box for me. I had to exploit a web application to get Remote Code Execution, find the user’s password in an notes file, then exploit the same application a second time to get r...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Awkward/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Awkward/Awk.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1677254400"
+    data-df="ll"
+    >
+  Feb 25, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Photobomb/">Hack The Box - Photobomb</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        In this easy box, I had to exploit a web application that allowed reformatting images to get remote code execution. Then I got root by exploiting a cleanup script with too many permissions.
+
+
+  Roo...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Photobomb/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Photobomb/Photo.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1676044800"
+    data-df="ll"
+    >
+  Feb 11, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Ambassador/">Hack The Box - Ambassador</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        This was a really fun box where I had to use multiple vulnerabilities. There was a Local File Inclusion (LFI), credentials stored in clear, misconfiguration, and a Git repository with a token in it...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Ambassador/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Ambassador/Amber.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1674835200"
+    data-df="ll"
+    >
+  Jan 28, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/2023/01/HTB/UpDown">Hack The Box - UpDown</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        It took me a long time to get a foothold on that machine. But once I was in, getting the user and root was very easy.
+
+
+  Room: UpDown
+  Difficulty: Medium
+  URL: https://app.hackthebox.com/machine...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/2023/01/HTB/UpDown">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/UpDown/Up.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1674230400"
+    data-df="ll"
+    >
+  Jan 21, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Shoppy/">Hack The Box - Shoppy</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        I had a hard time getting my initial access to this box. It required playing with Mongo Injection. And multiple enumerations of subdomains. Once on the box, getting root was quick. A reversing of a...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Shoppy/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Shoppy/Shopy.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1673625600"
+    data-df="ll"
+    >
+  Jan 14, 2023
+</em>
+
+
+        <!-- categories -->
+        
+
+      </div>
+
+      
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+
+
+  <div class="post-preview">
+    <h1>
+      <a href="/posts/HackTheBox-Walkthrough-Health/">Hack The Box - Health</a>
+    </h1>
+
+    <div class="post-content">
+      <p>
+        
+
+
+
+
+
+        This was a difficult, but fun machine. It came out as an easy machine before being reclassified as medium. It took me a long time before I finally pwned it.
+
+It started with using a web application...
+      </p>
+      <div class="post-img-cnt img-responsive" style="text-align: center" >
+        <a href="/posts/HackTheBox-Walkthrough-Health/">
+          <img style="margin-top:10px; margin-bottom:10px;" src="/assets/images/Health/H.png"  width="500" align="center" />
+        </a>
+
+        
+        <!-- <img width="35%" style="margin-top:10px; margin-bottom:10px; margin-right:10px;" src="" class="pull-left img-responsive"> -->
+      
+      </div>
+    </div>
+
+    <div class="post-meta text-muted d-flex">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class=""
+    data-ts="1673020800"
+    data-df="ll"
+    >
+  Jan  7, 2023
+</em>
+
+
+        <!-- categories -->
         
 
       </div>
@@ -705,17 +1008,34 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
   
 
+    
+    
+    
+    
+    
+
+    
+
+    
+      <!-- show number -->
+      <li class="page-item ">
+        <a class="page-link btn-box-shadow" href="/page2">2</a>
+      </li>
+    
+
+  
+
   <!-- mobile pagination -->
   <li class="page-index align-middle">
     <span>1</span>
-    <span class="text-muted">/ 1</span>
+    <span class="text-muted">/ 2</span>
   </li>
 
   <!-- right arrow -->
   
 
-  <li class="page-item disabled">
-    <a class="page-link btn-box-shadow" href="#" aria-label="next-page">
+  <li class="page-item ">
+    <a class="page-link btn-box-shadow" href="/page2" aria-label="next-page">
       <i class="fas fa-angle-right"></i>
     </a>
   </li>
@@ -809,6 +1129,493 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -867,62 +1674,15 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -951,194 +1711,9 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1163,34 +1738,34 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>
@@ -1271,6 +1846,493 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
     
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1329,62 +2391,15 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1413,194 +2428,9 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
     
     
       
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1625,34 +2455,34 @@ Paper is an easy rated machine on HackTheBox created by secnigma. For the user p
 
     
       
+      <a class="post-tag" href="/tags/hacking/">Hacking</a>
+    
+      
+      <a class="post-tag" href="/tags/hackthebox/">HackTheBox</a>
+    
+      
+      <a class="post-tag" href="/tags/machine/">Machine</a>
+    
+      
+      <a class="post-tag" href="/tags/walkthrough/">Walkthrough</a>
+    
+      
+      <a class="post-tag" href="/tags/medium/">Medium</a>
+    
+      
       <a class="post-tag" href="/tags/linux/">linux</a>
     
       
       <a class="post-tag" href="/tags/cve/">cve</a>
     
       
+      <a class="post-tag" href="/tags/easy/">Easy</a>
+    
+      
       <a class="post-tag" href="/tags/c/">c</a>
     
       
       <a class="post-tag" href="/tags/chroot/">chroot</a>
-    
-      
-      <a class="post-tag" href="/tags/coding/">coding</a>
-    
-      
-      <a class="post-tag" href="/tags/easy/">easy</a>
-    
-      
-      <a class="post-tag" href="/tags/exfitool/">exfitool</a>
-    
-      
-      <a class="post-tag" href="/tags/hashcat/">hashcat</a>
-    
-      
-      <a class="post-tag" href="/tags/imagemagick/">imagemagick</a>
-    
-      
-      <a class="post-tag" href="/tags/insane/">insane</a>
     
 
     </div>
